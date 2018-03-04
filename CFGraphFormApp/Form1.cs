@@ -27,25 +27,10 @@ namespace CFGraphFormApp
 
                 foreach (var matchedFunction in PParser.GetFunctionContents(tokens))
                 {
-                    listBox1.Items.Clear();
+                   
                     var graph = new Graph<SStatement>();
                     matchedFunction.BuildGraphNodes(graph);
-                    listBox1.Items.Clear();
-                    listBox2.Items.Clear();
-                    listBox3.Items.Clear();
-
-                    foreach (var token in tokens)
-                        listBox1.Items.Add(token.LineNumber + "_" + token.StartSym + "\t<" + token.TokenType + "> " +
-                                           token.TokenCode);
-
-                    for (int i = 0, j = 0; i < graph.Nodes.Count; i++)
-                    {
-                        var node = graph.Nodes[i];
-                        if (node.Value.Visible)
-                            listBox3.Items.Add(++j + ": " + node.Value.CodeString);
-                        listBox2.Items.Add(i + ": " + node.Value.CodeString);
-                    }
-
+                   
                     RemoveUnvisible(graph);
                     var matrix = graph.GetMatrix();
 

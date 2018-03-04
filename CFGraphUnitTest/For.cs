@@ -18,11 +18,12 @@ void ReadTemperature(int TemperatureType)
 } 
 ";
 
-            var result = new int[3, 3]
+            var result = new int[4, 4]
             {
-                {0, 1, 1},
-                {1, 0, 0},
-                {0, 0, 0}
+                {0, 1, 0, 0},
+                {0, 0, 1, 1},
+                {0, 1, 0, 0},
+                {0, 0, 0, 0}
             };
 
             var matrix = GetMatrixFromCode(code);
@@ -43,12 +44,13 @@ void ReadTemperature(int TemperatureType)
 }
 ";
 
-            var result = new int[4, 4]
+            var result = new int[5, 5]
             {
-                {0, 1, 1, 0},
-                {1, 0, 0, 0},
-                {0, 0, 0, 1},
-                {0, 0, 0, 0}
+                {0, 1, 0, 0, 0},
+                {0, 0, 1, 1, 0},
+                {0, 1, 0, 0, 0},
+                {0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0}
             };
 
             var matrix = GetMatrixFromCode(code);
@@ -70,13 +72,14 @@ void ReadTemperature(int TemperatureType)
 }
 ";
 
-            var result = new int[5, 5]
+            var result = new int[6, 6]
             {
-                {0, 1, 1, 0, 0},
-                {1, 0, 0, 0, 0},
-                {0, 0, 0, 1, 0},
-                {0, 0, 0, 0, 1},
-                {0, 0, 0, 0, 0}
+                {0, 1, 0, 0, 0, 0},
+                {0, 0, 1, 1, 0, 0},
+                {0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 0, 1, 0},
+                {0, 0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0, 0}
             };
 
             var matrix = GetMatrixFromCode(code);
@@ -99,13 +102,14 @@ void ReadTemperature(int TemperatureType)
 }
 ";
 
-            var result = new int[5, 5]
+            var result = new int[6, 6]
             {
-                {0, 1, 0, 1, 0},
-                {0, 0, 1, 0, 0},
-                {1, 0, 0, 0, 0},
-                {0, 0, 0, 0, 1},
-                {0, 0, 0, 0, 0}
+                {0, 1, 0, 0, 0, 0},
+                {0, 0, 1, 0, 1, 0},
+                {0, 0, 0, 1, 0, 0},
+                {0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0, 0}
             };
 
             var matrix = GetMatrixFromCode(code);
@@ -127,13 +131,14 @@ void ReadTemperature(int TemperatureType)
 }
 ";
 
-            var result = new int[5, 5]
+            var result = new int[6, 6]
             {
-                {0, 1, 0, 1, 0},
-                {1, 0, 1, 0, 0},
-                {1, 0, 0, 0, 0},
-                {0, 0, 0, 0, 1},
-                {0, 0, 0, 0, 0}
+                {0, 1, 0, 0, 0, 0},
+                {0, 0, 1, 0, 1, 0},
+                {0, 1, 0, 1, 0, 0},
+                {0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0, 0}
             };
 
             var matrix = GetMatrixFromCode(code);
@@ -157,14 +162,15 @@ TemperatureType--;
 }
 ";
 
-            var result = new int[6, 6]
+            var result = new int[7, 7]
             {
-                {0, 1, 0, 0, 1, 0},
-                {0, 0, 1, 1, 0, 0},
-                {0, 0, 0, 1, 0, 0},
-                {1, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 1},
-                {0, 0, 0, 0, 0, 0}
+                {0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 1, 0, 0, 1, 0},
+                {0, 0, 0, 1, 1, 0, 0},
+                {0, 0, 0, 0, 1, 0, 0},
+                {0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0, 0, 0}
             };
 
             var matrix = GetMatrixFromCode(code);

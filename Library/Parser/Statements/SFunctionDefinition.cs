@@ -16,11 +16,21 @@ namespace Library.Parser.Statements
 
         public void BuildGraphNodes(Graph<SStatement> graph)
         {
-            var lastNodes = _functionBody.BuildGraphNodes(graph, new List<GraphNode<SStatement>>());
+            var previousNodes = new List<GraphNode<SStatement>>
+            {
+                graph.AddNode(new GraphNode<SStatement>(new SLabeledStatement("StartNode", null, null)))
+            };
+            var lastNodes = _functionBody.BuildGraphNodes(graph, previousNodes);
             var currentNode = graph.AddNode(new GraphNode<SStatement>(new SLabeledStatement("EndNode", null, null)));
 
             foreach (var node in lastNodes)
                 graph.AddDirectedEdge(node, currentNode, 1);
+
+            foreach (var node in graph.Nodes)
+            {
+                if (node.Value.CodeString.StartsWith("return"))
+                    graph.AddDirectedEdge((GraphNode<SStatement>)node, currentNode, 1);
+            }
         }
     }
 }
